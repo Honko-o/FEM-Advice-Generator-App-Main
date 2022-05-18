@@ -1,0 +1,21 @@
+@use '../core/variables' as *;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $neutral-blue-900;
+}
+// @media (max-width: 950px) {
+
+// }
+
+a {
+    text-decoration: none;
+}

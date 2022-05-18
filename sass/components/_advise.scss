@@ -1,0 +1,61 @@
+@use '../core/' as *;
+
+.advise {
+    position: relative;
+    max-width: 500px;
+    margin: 0 20px;
+    padding: 1em;
+    background-color: $neutral-gray-blue-700;
+    border-radius: 16px;
+    text-align: center;
+    .advise__id {
+        color: $primary-neon-green;
+        font-size: 0.4em;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin-bottom: 1em;
+        span {
+
+        }
+    }
+    .advise__text {
+        display: block;
+        color: $primary-light-cyan;
+        line-height: 1.6;
+        margin: {
+            top: 0;
+            bottom: 1em;
+            right: 0;
+            left: 0;
+        }
+        
+    }
+    .separator {
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+    #advise__generator {
+        background-color: $primary-neon-green;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        &::before {
+            content: url('../images/icon-dice.svg');
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:hover {
+            background-color: lighten($primary-neon-green, 1%);
+            box-shadow: 0 0 10px lighten($primary-neon-green, 1%),
+                        0 0 25px lighten($primary-neon-green, 1%),
+                        0 0 50px lighten($primary-neon-green, 1%);
+        }
+    }
+}
